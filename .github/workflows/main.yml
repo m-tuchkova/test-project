@@ -1,4 +1,4 @@
-name: Functional tests
+name: Functional tests 1
 
 on:
   pull_request:

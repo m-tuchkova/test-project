@@ -1,0 +1,51 @@
+name: Functional tests 2
+
+on:
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  build:
+#    container:
+#      image: kochetkovma/allure-server:latest
+#      ports:
+#        - 8080
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        java: [11]
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up JDK
+        uses: actions/setup-java@v1
+        with:
+          java-version: ${{ matrix.java }}
+
+      - name: Cache Maven dependendcies
+        uses: actions/cache@v1
+        with:
+          path: ~/.m2/repository
+          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+          restore-keys: |
+            ${{ runner.os }}-maven-
+
+      - name: Build with Maven
+        run: mvn test
+
+  build-results:
+    runs-on: ubuntu-latest
+    container:
+      image: kochetkovma/allure-server:latest
+      ports:
+       - 8080
+    steps:
+      - name: Send Results and Generate Allure Report
+        if: always()
+        uses: Xotabu4/send-to-allure-server-action@1
+        with:
+          allure-server-url: 'http://localhost:8080/'
