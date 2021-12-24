@@ -1,0 +1,62 @@
+{
+  "uid" : "c15d432d5006b656",
+  "name" : "test2",
+  "fullName" : "BaseTest.test2",
+  "historyId" : "f3961d5a89307aba07061d2f32e72bbc",
+  "time" : {
+    "start" : 1640341506683,
+    "stop" : 1640341506683,
+    "duration" : 0
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "BaseTest"
+  }, {
+    "name" : "testClass",
+    "value" : "BaseTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "test2"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Surefire suite"
+  }, {
+    "name" : "suite",
+    "value" : "Surefire test"
+  }, {
+    "name" : "subSuite",
+    "value" : "BaseTest"
+  }, {
+    "name" : "host",
+    "value" : "fv-az209-509"
+  }, {
+    "name" : "thread",
+    "value" : "2967@fv-az209-509.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "testng"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "c15d432d5006b656.json",
+  "parameterValues" : [ ]
+}
