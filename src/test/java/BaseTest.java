@@ -11,4 +11,9 @@ public class BaseTest {
     public void test2() {
         assert true;
     }
+
+    @Test
+    public void test3() {
+        assert true;
+    }
 }
